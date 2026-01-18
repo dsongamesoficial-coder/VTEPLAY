@@ -1,0 +1,8 @@
+{
+  "name": "VTEPLAY",
+  "description": "Uma plataforma de streaming premium com canais ao vivo, filmes, séries e novelas, inspirada no design da Globoplay.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
