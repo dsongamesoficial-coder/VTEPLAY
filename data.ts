@@ -1,83 +1,105 @@
-
 import { ContentItem } from './types';
 
 export const HERO_SLIDES = [
   {
     id: '1',
-    title: 'Pantanal',
-    image: 'https://picsum.photos/seed/pantanal/1920/1080',
-    description: 'A saga de uma família de peões no coração do Brasil.',
-    category: 'novelas'
-  },
-  {
-    id: '2',
-    title: 'Top Gun: Maverick',
-    image: 'https://picsum.photos/seed/topgun/1920/1080',
-    description: 'Ação e adrenalina nos céus com Tom Cruise.',
-    category: 'filmes'
-  },
-  {
-    id: '3',
-    title: 'The Bear',
-    image: 'https://picsum.photos/seed/thebear/1920/1080',
-    description: 'O caos de uma cozinha profissional em Chicago.',
-    category: 'series'
-  },
-  {
-    id: '4',
-    title: 'BBB 24 Ao Vivo',
-    image: 'https://picsum.photos/seed/bbb/1920/1080',
-    description: 'Acompanhe a casa mais vigiada do Brasil 24 horas por dia.',
+    title: 'BBB 26: Acompanhe 24h',
+    image: 'https://images.unsplash.com/photo-1593072092524-3200b2046326?q=80&w=1920&auto=format&fit=crop',
+    description: 'A casa mais vigiada do Brasil agora na VTEPLAY. Assista a todas as câmeras em tempo real.',
     category: 'canais'
   },
   {
-    id: '5',
-    title: 'Duna: Parte 2',
-    image: 'https://picsum.photos/seed/dune/1920/1080',
-    description: 'A jornada mística de Paul Atreides continua.',
-    category: 'filmes'
+    id: '2',
+    title: 'Pedaço de Mim',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920&auto=format&fit=crop',
+    description: 'A primeira novela original Netflix Brasil. Um drama intenso sobre maternidade e segredos.',
+    category: 'novelas'
   },
   {
-    id: '6',
-    title: 'Todas as Flores',
-    image: 'https://picsum.photos/seed/flores/1920/1080',
-    description: 'Uma história de superação e vingança.',
+    id: '3',
+    title: 'Pantanal',
+    image: 'https://images.unsplash.com/photo-1440613905118-99b921706b5c?q=80&w=1920&auto=format&fit=crop',
+    description: 'O épico que parou o Brasil. A saga de Juma Marruá e a família Leôncio em 4K.',
     category: 'novelas'
+  },
+  {
+    id: '4',
+    title: 'Premiere: Brasileirão',
+    image: 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1920&auto=format&fit=crop',
+    description: 'Assista a todos os jogos do seu time do coração ao vivo e em alta definição.',
+    category: 'canais'
   }
 ];
 
 export const CANAIS: ContentItem[] = [
-  { id: 'c1', title: 'Globo RJ', image: 'https://picsum.photos/seed/globorj/400/600', category: 'canais' },
-  { id: 'c2', title: 'SporTV', image: 'https://picsum.photos/seed/sportv/400/600', category: 'canais' },
-  { id: 'c3', title: 'Multishow', image: 'https://picsum.photos/seed/multishow/400/600', category: 'canais' },
-  { id: 'c4', title: 'GNT', image: 'https://picsum.photos/seed/gnt/400/600', category: 'canais' },
-  { id: 'c5', title: 'GloboNews', image: 'https://picsum.photos/seed/globonews/400/600', category: 'canais' },
-  { id: 'c6', title: 'Premiere', image: 'https://picsum.photos/seed/premiere/400/600', category: 'canais' },
+  // ABERTOS & REGIONAIS
+  { id: 'c1', title: 'Globo Nordeste', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/TV_Globo_logo.svg/1024px-TV_Globo_logo.svg.png', category: 'canais' },
+  { id: 'c11', title: 'SBT Ao Vivo', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/SBT_logo.svg/1200px-SBT_logo.svg.png', category: 'canais' },
+  { id: 'c13', title: 'Record TV', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/RecordTV_logo.svg/1200px-RecordTV_logo.svg.png', category: 'canais' },
+  { id: 'c12', title: 'Band', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Band_logo.svg/1200px-Band_logo.svg.png', category: 'canais' },
+  
+  // INFANTIL
+  { id: 'kids1', title: 'Disney Channel', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Disney_Channel_logo.svg/1200px-Disney_Channel_logo.svg.png', category: 'canais' },
+  { id: 'kids2', title: 'Cartoon Network', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/1200px-Cartoon_Network_2010_logo.svg.png', category: 'canais' },
+
+  // CLÁSSICOS 24H
+  { id: '24h1', title: 'Chaves 24 Horas', image: 'https://upload.wikimedia.org/wikipedia/pt/thumb/f/f6/El_Chavo_del_Ocho.svg/1200px-El_Chavo_del_Ocho.svg.png', category: 'canais' },
+  
+  // ESPORTES & NOTÍCIAS
+  { id: 'sp1', title: 'SporTV 1', image: 'https://upload.wikimedia.org/wikipedia/pt/thumb/a/ab/Logotipo_SporTV.png/250px-Logotipo_SporTV.png', category: 'canais' },
+  { id: 'pre1', title: 'Premiere 1', image: 'https://upload.wikimedia.org/wikipedia/pt/thumb/e/e0/Logotipo_Premiere.png/250px-Logotipo_Premiere.png', category: 'canais' },
+  { id: 'news2', title: 'BandNews TV', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/BandNews_TV_logo.svg/1200px-BandNews_TV_logo.svg.png', category: 'canais' },
+  { id: 'c7', title: 'GloboNews', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Globonews_2021.png/1200px-Globonews_2021.png', category: 'canais' },
 ];
 
 export const FILMES: ContentItem[] = [
-  { id: 'f1', title: 'Oppenheimer', image: 'https://picsum.photos/seed/opp/400/600', category: 'filmes', year: 2023 },
-  { id: 'f2', title: 'Barbie', image: 'https://picsum.photos/seed/barb/400/600', category: 'filmes', year: 2023 },
-  { id: 'f3', title: 'Avatar 2', image: 'https://picsum.photos/seed/av2/400/600', category: 'filmes', year: 2022 },
-  { id: 'f4', title: 'Batman', image: 'https://picsum.photos/seed/bat/400/600', category: 'filmes', year: 2022 },
-  { id: 'f5', title: 'Infiltrado', image: 'https://picsum.photos/seed/inf/400/600', category: 'filmes', year: 2021 },
-  { id: 'f6', title: 'O Menu', image: 'https://picsum.photos/seed/menu/400/600', category: 'filmes', year: 2022 },
+  // NETFLIX ORIGINALS
+  { id: 'f_n1', title: 'O Irlandês', image: 'https://picsum.photos/seed/irlandes/400/600', category: 'filmes', year: 2019 },
+  { id: 'f_n2', title: 'Glass Onion', image: 'https://picsum.photos/seed/glass/400/600', category: 'filmes', year: 2022 },
+  { id: 'f_n3', title: 'Alerta Vermelho', image: 'https://picsum.photos/seed/rednotice/400/600', category: 'filmes', year: 2021 },
+  { id: 'f_n4', title: 'A Sociedade da Neve', image: 'https://picsum.photos/seed/snowsociety/400/600', category: 'filmes', year: 2024 },
+  
+  // GLOBOPLAY / CINEMA NACIONAL
+  { id: 'f_g1', title: 'Cidade de Deus', image: 'https://picsum.photos/seed/cityofgod/400/600', category: 'filmes', year: 2002 },
+  { id: 'f_g2', title: 'Tropa de Elite', image: 'https://picsum.photos/seed/tropadeelite/400/600', category: 'filmes', year: 2007 },
+  { id: 'f_g3', title: 'O Auto da Compadecida', image: 'https://picsum.photos/seed/auto/400/600', category: 'filmes', year: 2000 },
+  { id: 'f_g4', title: 'Bacurau', image: 'https://picsum.photos/seed/bacurau/400/600', category: 'filmes', year: 2019 },
 ];
 
 export const SERIES: ContentItem[] = [
-  { id: 's1', title: 'Succession', image: 'https://picsum.photos/seed/succ/400/600', category: 'series' },
-  { id: 's2', title: 'The Last of Us', image: 'https://picsum.photos/seed/tlou/400/600', category: 'series' },
-  { id: 's3', title: 'Euphoria', image: 'https://picsum.photos/seed/euph/400/600', category: 'series' },
-  { id: 's4', title: 'The White Lotus', image: 'https://picsum.photos/seed/twl/400/600', category: 'series' },
-  { id: 's5', title: 'House of the Dragon', image: 'https://picsum.photos/seed/hotd/400/600', category: 'series' },
-  { id: 's6', title: 'Yellowjackets', image: 'https://picsum.photos/seed/yj/400/600', category: 'series' },
+  // NETFLIX HITS
+  { id: 's_n1', title: 'Stranger Things', image: 'https://picsum.photos/seed/stranger/400/600', category: 'series', year: 2016 },
+  { id: 's_n2', title: 'Wandinha', image: 'https://picsum.photos/seed/wednesday/400/600', category: 'series', year: 2022 },
+  { id: 's_n3', title: 'The Crown', image: 'https://picsum.photos/seed/crown/400/600', category: 'series', year: 2016 },
+  { id: 's_n4', title: 'La Casa de Papel', image: 'https://picsum.photos/seed/moneyheist/400/600', category: 'series', year: 2017 },
+  
+  // GLOBOPLAY ORIGINALS
+  { id: 's_g1', title: 'Todas as Flores', image: 'https://picsum.photos/seed/flores/400/600', category: 'series', year: 2022 },
+  { id: 's_g2', title: 'Os Outros', image: 'https://picsum.photos/seed/others/400/600', category: 'series', year: 2023 },
 ];
 
 export const NOVELAS: ContentItem[] = [
-  { id: 'n1', title: 'Avenida Brasil', image: 'https://picsum.photos/seed/avbr/400/600', category: 'novelas' },
-  { id: 'n2', title: 'O Clone', image: 'https://picsum.photos/seed/clone/400/600', category: 'novelas' },
-  { id: 'n3', title: 'Senhora do Destino', image: 'https://picsum.photos/seed/senhora/400/600', category: 'novelas' },
-  { id: 'n4', title: 'Caminho das Índias', image: 'https://picsum.photos/seed/india/400/600', category: 'novelas' },
-  { id: 'n5', title: 'Império', image: 'https://picsum.photos/seed/imperio/400/600', category: 'novelas' },
-  { id: 'n6', title: 'Chocolate com Pimenta', image: 'https://picsum.photos/seed/choc/400/600', category: 'novelas' },
+  // GLOBOPLAY (CLÁSSICOS E MODERNOS)
+  { id: 'n_g1', title: 'Avenida Brasil', image: 'https://picsum.photos/seed/avenida/400/600', category: 'novelas', year: 2012 },
+  { id: 'n_g2', title: 'Pantanal', image: 'https://picsum.photos/seed/pantanal/400/600', category: 'novelas', year: 2022 },
+  { id: 'n_g3', title: 'Verdades Secretas', image: 'https://picsum.photos/seed/verdades/400/600', category: 'novelas', year: 2015 },
+  { id: 'n_g4', title: 'Renascer', image: 'https://picsum.photos/seed/renascer/400/600', category: 'novelas', year: 2024 },
+  { id: 'n_g5', title: 'Terra e Paixão', image: 'https://picsum.photos/seed/terra/400/600', category: 'novelas', year: 2023 },
+  { id: 'n_g6', title: 'O Clone', image: 'https://picsum.photos/seed/clone/400/600', category: 'novelas', year: 2001 },
+  { id: 'n_g7', title: 'Vale Tudo', image: 'https://picsum.photos/seed/valetudo/400/600', category: 'novelas', year: 1988 },
+  { id: 'n_g8', title: 'Senhora do Destino', image: 'https://picsum.photos/seed/senhora/400/600', category: 'novelas', year: 2004 },
+
+  // NETFLIX ORIGINALS
+  { id: 'n_n1', title: 'Pedaço de Mim', image: 'https://picsum.photos/seed/pedaco/400/600', category: 'novelas', year: 2024 },
+  { id: 'n_n2', title: 'Rebelde', image: 'https://picsum.photos/seed/rebelden/400/600', category: 'novelas', year: 2022 },
+  { id: 'n_n3', title: 'Coração Marcado', image: 'https://picsum.photos/seed/coracao/400/600', category: 'novelas', year: 2022 },
+
+  // SBT+ (INFANTIL E CLÁSSICOS)
+  { id: 'n_s1', title: 'Carrossel', image: 'https://picsum.photos/seed/carrossel/400/600', category: 'novelas', year: 2012 },
+  { id: 'n_s2', title: 'Chiquititas', image: 'https://picsum.photos/seed/chiquititas/400/600', category: 'novelas', year: 2013 },
+  { id: 'n_s3', title: 'As Aventuras de Poliana', image: 'https://picsum.photos/seed/poliana/400/600', category: 'novelas', year: 2018 },
+  // Removed invalid 'size' property to match ContentItem interface
+  { id: 'n_s4', title: 'Cúmplices de um Resgate', image: 'https://picsum.photos/seed/cumplices/400/600', category: 'novelas', year: 2015 },
+  { id: 'n_s5', title: 'Poliana Moça', image: 'https://picsum.photos/seed/polianam/400/600', category: 'novelas', year: 2022 },
+  { id: 'n_s6', title: 'A Infância de Romeu e Julieta', image: 'https://picsum.photos/seed/romeu/400/600', category: 'novelas', year: 2023 },
 ];

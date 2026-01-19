@@ -7,10 +7,14 @@ export interface ContentItem {
   description?: string;
   rating?: string;
   year?: number;
+  videoUrl?: string;
 }
 
 export interface User {
+  id: string;
   name: string;
   email: string;
+  role: 'user' | 'admin';
   isSubscribed: boolean;
+  createdAt: string;
 }

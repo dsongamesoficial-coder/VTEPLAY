@@ -1,13 +1,16 @@
 
 import React from 'react';
-import { X, Home, Tv, Film, MonitorPlay, Heart, Settings, HelpCircle, Package } from 'lucide-react';
+import { X, Home, Tv, Film, MonitorPlay, Heart, Settings, HelpCircle, Package, Shield } from 'lucide-react';
+import { User } from '../types';
 
 interface SidebarProps {
+  user: User | null;
   isOpen: boolean;
   onClose: () => void;
+  onOpenAdmin: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ user, isOpen, onClose, onOpenAdmin }) => {
   const menuItems = [
     { icon: <Home size={20} />, label: 'Início', active: true },
     { icon: <Tv size={20} />, label: 'Agora na TV' },
@@ -29,15 +32,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       
       {/* Menu Panel */}
       <div className={`fixed top-0 left-0 bottom-0 w-[280px] md:w-[320px] bg-[#0c0c0c] z-[70] shadow-2xl transition-transform duration-500 ease-out border-r border-white/5 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="p-6 flex flex-col h-full">
+        <div className="p-6 flex flex-col h-full overflow-y-auto">
           <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl font-black text-[#fb0334] italic">VTEPLAY</h2>
+            <h2 className="text-2xl font-black text-[#fb0334] italic select-none">VTEPLAY</h2>
             <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition-colors">
               <X size={24} />
             </button>
           </div>
 
           <nav className="flex-grow space-y-2">
+            {user?.role === 'admin' && (
+              <button
+                onClick={() => { onOpenAdmin(); onClose(); }}
+                className="w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all bg-[#fb0334]/10 text-[#fb0334] hover:bg-[#fb0334]/20 border border-[#fb0334]/20 mb-4"
+              >
+                <Shield size={20} />
+                <span className="font-bold uppercase tracking-widest text-xs">Painel Admin</span>
+              </button>
+            )}
+
             {menuItems.map((item, i) => (
               <button
                 key={i}
@@ -50,13 +63,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </nav>
 
           <div className="mt-auto pt-6 border-t border-white/10">
-            <div className="p-4 bg-gradient-to-br from-[#fb0334]/20 to-transparent rounded-2xl border border-[#fb0334]/30">
-              <p className="text-xs font-bold text-[#fb0334] uppercase mb-1">Oferta Exclusiva</p>
-              <h4 className="font-bold text-sm mb-3">Assine o plano VTE Premium</h4>
-              <button className="w-full bg-[#fb0334] text-white py-2 rounded-lg text-sm font-bold shadow-lg shadow-[#fb0334]/20">
-                VER PLANOS
-              </button>
-            </div>
+            {(!user || !user.isSubscribed) ? (
+              <div className="p-4 bg-gradient-to-br from-[#fb0334]/20 to-transparent rounded-2xl border border-[#fb0334]/30">
+                <p className="text-xs font-bold text-[#fb0334] uppercase mb-1">Oferta Exclusiva</p>
+                <h4 className="font-bold text-sm mb-3">Assine o plano VTE Premium</h4>
+                <button className="w-full bg-[#fb0334] text-white py-2 rounded-lg text-sm font-bold shadow-lg shadow-[#fb0334]/20 hover:bg-[#ff2b56] transition-all">
+                  VER PLANOS
+                </button>
+              </div>
+            ) : (
+              <div className="p-4 bg-white/5 rounded-2xl border border-white/10 text-center">
+                <p className="text-xs font-bold text-green-500 uppercase mb-1">Status: Ativo</p>
+                <h4 className="font-bold text-sm">Assinatura Premium</h4>
+              </div>
+            )}
           </div>
         </div>
       </div>
